@@ -42,4 +42,4 @@ required_dataset<-group_by(required_dataset,subjectId,activity)
 finaloutput<-summarise(required_dataset,across("tBodyAcc-mean()-X":"fBodyBodyGyroJerkMag-std()",mean))
 
 #write to a file
-write.csv(finaloutput, "finaloutput.csv", row.names=FALSE)
+write.table(finaloutput, "finaloutput.txt", row.names=FALSE)
